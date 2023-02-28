@@ -34,3 +34,6 @@ El script admite una serie de parámetros que se explican cuando ejecuta:
 
 - > ./CIC2023Osint.sh -h
 
+## Manual completo de instalación sobre máquina virtual Ubuntu
+
+
