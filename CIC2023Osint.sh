@@ -14,20 +14,13 @@ gray="\e[0;37m\033[1m"
 
 function banner() {
 	echo
-	echo -e "███╗   ██╗███████╗██████╗  ██╗ ██████╗ ███████╗██╗███╗   ██╗████████╗"
-	echo -e "████╗  ██║██╔════╝╚════██╗███║██╔═══██╗██╔════╝██║████╗  ██║╚══██╔══╝"
-	echo -e "██╔██╗ ██║███████╗ █████╔╝╚██║██║   ██║███████╗██║██╔██╗ ██║   ██║   "
-	echo -e "██║╚██╗██║╚════██║██╔═══╝  ██║██║   ██║╚════██║██║██║╚██╗██║   ██║   "
-	echo -e "██║ ╚████║███████║███████╗ ██║╚██████╔╝███████║██║██║ ╚████║   ██║   "
-	echo -e "╚═╝  ╚═══╝╚══════╝╚══════╝ ╚═╝ ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝   ╚═╝   "
-	echo
 	echo
 	echo -e "  \t\t   ${cyan}Instalación básica de herramientas OSINT${end}"
 	echo -e "  \tScript para automatizar la instalación de herramientas OSINT"
-	echo -e "  \t\t\t   Master en ${red}Ciberseguridad 7ª Edición ${end}"
-	echo -e "  \t\t\t   Tutores: ${cyan}Félix Brezo y Yaiza Rubio"${end}
+	echo -e "  \t\t\t   Curso en ${red}Investigación Fuentes Abiertas (OSINT) ${end}"
 	echo -e "  \t\t\t  Creado por ${blue}Miguel Navarro Santa${end}"
-	echo -e "  \t\t\t  Versión ${blue}1.0${end}"
+	echo -e "  \t\t\t  Actualizado por ${blue}Jordi Montaner${end}"
+	echo -e "  \t\t\t  Versión ${blue}2.0${end}"
 }
 
 # Declaracion de variables
@@ -467,7 +460,7 @@ function marcadores_firefox() {
 	echo -e "${yellow}[*]${end}${gray}*****  Instalación de marcadores para Firefox  *****${end}"
 
 	#Existe el perfil del usuario
-	if test -f ~/.mozilla/firefox/*default-release/places.sqlite; then
+	if test -f ~/snap/firefox/common/.mozilla/firefox/places.sqlite; then
 
 		RESULT=$(pgrep firefox) #Compruebo si Firefox está abierto
 
@@ -477,12 +470,12 @@ function marcadores_firefox() {
 				test -f /usr/bin/sqlite3 &>/dev/null
 
 				if [ "$(echo $?)" != "0" ]; then
-					echo -e "${red}\n[!] No existe 'sqlite3'. Ejecute ./ns21osint.sh -i para instalar los requisitos mínimos.\n${end}"
+					echo -e "${red}\n[!] No existe 'sqlite3'. Ejecute ./CIC2023Osint.sh -i para instalar los requisitos mínimos.\n${end}"
 					tput cnorm
 					exit 1
 				fi
 
-				sqlite3 ~/.mozilla/firefox/*default-release/places.sqlite <marcadores.sql >/dev/null 2>&1
+				sqlite3 ~/snap/firefox/common/.mozilla/firefox/places.sqlite <marcadores.sql >/dev/null 2>&1
 
 				echo -e "\n${cyan}\n[+] Marcadores instalados con éxito\n${end}"
 			else
@@ -500,12 +493,12 @@ function actualiza_script() {
 	echo -e "${yellow}[*]${end}${gray}*****  Actualización de script  *****${end}"
 
 	if [ "$(echo $?)" != "0" ]; then
-		echo -e "${red}\n[!] No existe 'git'. Ejecute ./ns21osint.sh -i para instalar los requisitos mínimos.\n${end}"
+		echo -e "${red}\n[!] No existe 'git'. Ejecute ./CIC2023Osint.sh -i para instalar los requisitos mínimos.\n${end}"
 		tput cnorm
 		exit 1
 	fi
 
-	git clone https://github.com/miguelns21/ns21Osint $githome/ns21osint >/dev/null 2>&1
+	git clone https://github.com/jordimonta/osint2023.git $githome/>/dev/null 2>&1
 	cp $githome/ns21osint/* .
 	echo -e "\n${cyan}\n[+] Script actualizado a la última versión disponible con éxito\n${end}"
 }
