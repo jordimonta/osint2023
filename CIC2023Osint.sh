@@ -499,7 +499,8 @@ function actualiza_script() {
 	fi
 
 	rm -rf $githome/osint2023
-	git clone https://github.com/jordimonta/osint2023.git $githome/ >/dev/null 2>&1
+	git clone https://github.com/jordimonta/osint2023.git $githome/osint2023 >/dev/null 2>&1
+	chmod 764 $githome/osint2023/CIC2023Osint.sh
 	echo -e "\n${cyan}\n[+] Script actualizado a la última versión disponible con éxito\n${end}"
 }
 
