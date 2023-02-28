@@ -1,5 +1,7 @@
 # Ejercicio Campus Ciberseguridad OSINT 2023
 
+El objetivo es modificar una distribución estable de Linux (Ubuntu 22.04.02) para equipos MAC con M1/M2 Chip y convertirla en una distribución Linux para la investigación de fuentes abiertas OSINT.
+
 ## Instalación sobre DISTRO Linux Ubuntu 22.04.02 sobre MAC M1/M2 Chip
 
 **Actualización del script creado por Miguel Navarro**:
