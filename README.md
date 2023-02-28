@@ -11,6 +11,9 @@ https://github.com/miguelns21/ns21osint
 **Instalación de nuevas herramientas**
 
 -Instaloader: https://github.com/instaloader/instaloader
+
 -Arachnid: https://pypi.org/project/arachnid-spider/
+
 -MediaInfo: https://mediaarea.net/es/MediaInfo
+
 
