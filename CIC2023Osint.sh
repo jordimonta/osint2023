@@ -43,7 +43,7 @@ function ctrl_c() {
 }
 
 function helpPanel() {
-	echo -e "${cyan}\n[?] Uso: ./ns21Osint.sh${end}"
+	echo -e "${cyan}\n[?] Uso: ./CIC2023Osint.sh${end}"
 	echo -e "\n\t${purple}${end}${yellow} Modo${end}"
 	echo -e "\t\t${red}-a${end} -> Actualizar el sistema e instala requerimientos."
 	echo -e "\t\t${red}-i${end} -> Para instalar las herramientas OSINT"
@@ -52,7 +52,7 @@ function helpPanel() {
 	echo -e "\t\t${red}-u${end} -> Para actualizar el script"
 	echo -e "\t\t${red}-h${end} -> Mostrar este panel de ayuda"
 	echo -e "\n\t${purple}${end}${yellow} Ejemplo de uso:${end}"
-	echo -e "\n\t${purple}./ns21Osint.sh -i ${end}"
+	echo -e "\n\t${purple}./CIC2023Osint.sh -i ${end}"
 	echo -e "\n\t\t${yellow} Instala las herramientas OSINT${end}\n"
 	exit 0
 }
@@ -166,7 +166,7 @@ function crear_entorno_entorno() {
 	test -f /usr/bin/git &>/dev/null
 
 	if [ "$(echo $?)" != "0" ]; then
-		echo -e "${red}\n[!] No existe 'git'. Ejecute ./ns21osint.sh -i para instalar los requisitos mínimos.\n${end}"
+		echo -e "${red}\n[!] No existe 'git'. Ejecute ./CIC2023Osint.sh -i para instalar los requisitos mínimos.\n${end}"
 		tput cnorm
 		exit 1
 	fi
@@ -213,7 +213,7 @@ function Osintgram() {
 	test -f /usr/bin/pip &>/dev/null
 
 	if [ "$(echo $?)" != "0" ]; then
-		echo -e "${red}\n[!] No existe 'pip'. Ejecute ./ns21osint.sh -i para instalar los requisitos mínimos.\n${end}"
+		echo -e "${red}\n[!] No existe 'pip'. Ejecute ./CIC2023Osint.sh -i para instalar los requisitos mínimos.\n${end}"
 		tput cnorm
 		exit 1
 	fi
@@ -236,7 +236,7 @@ function nexfil() {
 	test -f /usr/bin/pip3 &>/dev/null
 
 	if [ "$(echo $?)" != "0" ]; then
-		echo -e "${red}\n[!] No existe 'pip3'. Ejecute ./ns21osint.sh -i para instalar los requisitos mínimos.\n${end}"
+		echo -e "${red}\n[!] No existe 'pip3'. Ejecute ./CIC2023Osint.sh -i para instalar los requisitos mínimos.\n${end}"
 		tput cnorm
 		exit 1
 	fi
@@ -259,7 +259,7 @@ function theHarvester() {
 	test -f /usr/bin/python3 &>/dev/null
 
 	if [ "$(echo $?)" != "0" ]; then
-		echo -e "${red}\n[!] No existe 'python3'. Ejecute ./ns21osint.sh -i para instalar los requisitos mínimos.\n${end}"
+		echo -e "${red}\n[!] No existe 'python3'. Ejecute ./CIC2023Osint.sh -i para instalar los requisitos mínimos.\n${end}"
 		tput cnorm
 		exit 1
 	fi
@@ -460,7 +460,7 @@ function marcadores_firefox() {
 	echo -e "${yellow}[*]${end}${gray}*****  Instalación de marcadores para Firefox  *****${end}"
 
 	#Existe el perfil del usuario
-	if test -f ~/snap/firefox/common/.mozilla/firefox/places.sqlite; then
+	if test -f ~/snap/firefox/common/.mozilla/firefox/xcvirdkx.default/places.sqlite; then
 
 		RESULT=$(pgrep firefox) #Compruebo si Firefox está abierto
 
@@ -475,7 +475,7 @@ function marcadores_firefox() {
 					exit 1
 				fi
 
-				sqlite3 ~/snap/firefox/common/.mozilla/firefox/places.sqlite <marcadores.sql >/dev/null 2>&1
+				sqlite3 ~/snap/firefox/common/.mozilla/firefox/xcvirdkx.default/places.sqlite <marcadores.sql >/dev/null 2>&1
 
 				echo -e "\n${cyan}\n[+] Marcadores instalados con éxito\n${end}"
 			else
