@@ -36,4 +36,4 @@ El script admite una serie de parámetros que se explican cuando ejecuta:
 
 ## Manual completo de instalación sobre máquina virtual Ubuntu
 
-
+PDF incluido en la carpeta 
