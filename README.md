@@ -18,4 +18,19 @@ https://github.com/miguelns21/ns21osint
 
 -MediaInfo: https://mediaarea.net/es/MediaInfo
 
+## Instalación
+
+Ejecute en el terminal de la distribución:
+
+> git clone [https://github.com/miguelns21/ns21osint.git](https://github.com/jordimonta/osint2023.git)
+
+> cd osint2023
+
+> ./CIC2023Osint.sh
+
+## Uso del script
+
+El script admite una serie de parámetros que se explican cuando ejecuta:
+
+- > ./CIC2023Osint.sh -h
 
