@@ -22,7 +22,7 @@ https://github.com/miguelns21/ns21osint
 
 Ejecute en el terminal de la distribución:
 
-> git clone [https://github.com/miguelns21/ns21osint.git](https://github.com/jordimonta/osint2023.git)
+> git clone https://github.com/jordimonta/osint2023.git
 
 > cd osint2023
 
