@@ -498,8 +498,8 @@ function actualiza_script() {
 		exit 1
 	fi
 
-	git clone https://github.com/jordimonta/osint2023.git $githome/>/dev/null 2>&1
-	cp $githome/ns21osint/* .
+	rm -rf $githome/osint2023
+	git clone https://github.com/jordimonta/osint2023.git $githome/ >/dev/null 2>&1
 	echo -e "\n${cyan}\n[+] Script actualizado a la última versión disponible con éxito\n${end}"
 }
 
