@@ -10,6 +10,4 @@ https://github.com/miguelns21/ns21osint
 
 **Instalación de nuevas herramientas**
 
-**Instaloader**
-
-https://github.com/instaloader/instaloader
+-Instaloader: https://github.com/instaloader/instaloader
